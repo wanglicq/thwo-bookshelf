@@ -1,6 +1,7 @@
 package com.thoughtworks.jimmy.model;
 
 public class Book {
+
     private String isbn;
     private String name;
     private String author;

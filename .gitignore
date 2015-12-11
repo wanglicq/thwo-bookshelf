@@ -2,9 +2,8 @@
 .gradle/
 
 idea/
-thwo-bookshelf.iml
-thwo-bookshelf.ipr
-thwo-bookshelf.iws
+*.iml
+*.ipr
+*.iws
 
 /build
-/classes

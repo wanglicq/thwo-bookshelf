@@ -6,5 +6,6 @@ thwo-bookshelf.iml
 thwo-bookshelf.ipr
 thwo-bookshelf.iws
 
-/build
-/classes
+build/
+
+README.md

@@ -1,10 +1,12 @@
 package com.thoughtworks.jimmy.repository;
 
 import com.thoughtworks.jimmy.model.Book;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class BookRepository {
 
     public static final Map<String, Book> BOOKS_MAP =
@@ -18,6 +20,10 @@ public class BookRepository {
 
     public Iterable<Book> findAll() {
         return BOOKS_MAP.values();
+    }
+
+    public Book findOne(String isbn) {
+        return BOOKS_MAP.get(isbn);
     }
 
 }

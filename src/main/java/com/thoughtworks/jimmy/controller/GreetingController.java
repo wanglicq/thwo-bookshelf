@@ -15,7 +15,7 @@ public class GreetingController {
         ModelAndView modelAndView = new ModelAndView();
 
         modelAndView.setViewName("hello");
-        modelAndView.addObject("name", name);
+        modelAndView.addObject("name",  name.toUpperCase());
 
         return modelAndView;
 

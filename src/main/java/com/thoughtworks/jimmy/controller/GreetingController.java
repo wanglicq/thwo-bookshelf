@@ -1,5 +1,6 @@
 package com.thoughtworks.jimmy.controller;
 
+import com.thoughtworks.jimmy.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +15,8 @@ public class GreetingController {
 
         ModelAndView modelAndView = new ModelAndView();
 
+        modelAndView.addObject("person",  new Person(name));
         modelAndView.setViewName("hello");
-        modelAndView.addObject("name",  name.toUpperCase());
 
         return modelAndView;
 

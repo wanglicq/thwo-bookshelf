@@ -27,10 +27,11 @@ public class BookRepository {
     }
 
     public Book save(Book book) {
-        return BOOKS_MAP.put(book.getIsbn(), book);
+        BOOKS_MAP.put(book.getIsbn(), book);
+        return book;
     }
 
-    public void remove(String isbn) {
-        BOOKS_MAP.remove(isbn);
+    public void remove(Book book) {
+        BOOKS_MAP.remove(book.getIsbn());
     }
 }

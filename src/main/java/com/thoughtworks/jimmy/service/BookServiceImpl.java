@@ -26,13 +26,13 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void create(Book book) {
-        bookRepository.save(book);
+    public Book create(Book book) {
+        return bookRepository.save(book);
     }
 
     @Override
-    public void delete(String isbn) {
-        bookRepository.remove(isbn);
+    public void delete(Book book) {
+        bookRepository.remove(book);
     }
 
     @Override

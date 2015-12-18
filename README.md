@@ -46,3 +46,46 @@ implement `create new book` functionality.
 
 
 
+## Database Level
+#### MySQL Service Started 
+  - Mac OS: sudo mysql.service start 
+  - Ubuntu : sudo service mysql start 
+  - mysql -uroot, then run create_db.sql
+
+#### Book Shelf Step 1
+  - Continue working on project “thwo-bookshelf” Step4
+  - Change BookRepository (extends CrudRepository)
+  - Create Table WO_BOOK(ISBN, NAME, AUTHOR, PRICE)
+  - No need to write SQL statement in this part
+
+#### Book Shelf Step 2
+  * As a DEV/DBA  I want to follow up database evolution versions  So that I can get DB maintenance in control easily
+  * Example:  
+  - V1: create the table BOOK 
+  - V2: change BOOK’s column NAME -> TITLE 
+  - V3: add unique key to (TITLE, AUTHOR) 
+  - …
+  * Tips: Similar with VCS
+
+#### Book Shelf Step 3
+  * As an admin  I want to add or amend the books  So that other users can get those books
+  * As a general user  I want to search books by title fuzzily  So that I can get the books in the same topic
+  * As a general user  I want to search books by category name  So that I can get the books I am interested in
+
+#### Book Shelf Step 4
+  * As a general user  I want to search books by price range  So that I can get the books within the price
+  * As a general user  I want to put stars(1-10) and comments on a book  So that I can know the book average ranking and comments
+  * As a general user  I want to get a book’s average stars and ranking  So that I can know how popular the book is
+
+#### Check Points
+  - Integration Test
+  - SQL Statement
+  - Spring Data JPA / Hibernate
+  - CrudRepository / JpaRepository
+  - Flyway Migration
+  - Transactional
+  - Pagination Result
+
+
+
+

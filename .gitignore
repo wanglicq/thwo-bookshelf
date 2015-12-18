@@ -1,6 +1,8 @@
 .gradletasknamecache
 .gradle/
 
+.DS_Store
+
 idea/
 *.iml
 *.ipr

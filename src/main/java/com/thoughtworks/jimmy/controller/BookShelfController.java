@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.thoughtworks.jimmy.entity.BookEntity;
 import com.thoughtworks.jimmy.service.BookService;
 
+//@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/books")
 public class BookShelfController {

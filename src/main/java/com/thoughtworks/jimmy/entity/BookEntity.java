@@ -7,23 +7,23 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "WO_BOOK")
+@Table(name = "wo_book")
 public class BookEntity {
     @Id
-    @Column(name = "ISBN", length = 30)
+    @Column(name = "isbn", length = 30)
     @NotNull
     private String isbn;
 
-    @Column(name = "TITLE", nullable = false, length = 100)
+    @Column(name = "title", nullable = false, length = 100)
     private String title;
 
-    @Column(name = "AUTHOR", nullable = false, length = 30)
+    @Column(name = "author", nullable = false, length = 30)
     private String author;
 
-    @Column(name = "PRICE", nullable = false)
+    @Column(name = "price", nullable = false)
     private Double price;
 
-    @Column(name = "CATEGORY_CODE")
+    @Column(name = "category_code")
     private String categoryCode;
 
     public BookEntity() {

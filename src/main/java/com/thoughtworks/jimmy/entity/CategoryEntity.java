@@ -7,16 +7,16 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "WO_CATEGORY")
+@Table(name = "wo_category")
 public class CategoryEntity {
     @Id
-    @Column(name = "CODE", length = 30)
+    @Column(name = "code", length = 30)
     private String code;
 
-    @Column(name = "NAME", nullable = false, unique = true, length = 30)
+    @Column(name = "name", nullable = false, unique = true, length = 30)
     private String name;
 
-    @Column(name = "DESCRIPTION")
+    @Column(name = "description")
     private String description;
 
     public CategoryEntity() {

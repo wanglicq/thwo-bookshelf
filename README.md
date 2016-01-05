@@ -1,4 +1,4 @@
-# thwo-bookshelf
+# thwo-bookRepository
 
 ## Database Level Workshop
 
@@ -32,7 +32,7 @@ Optimize database
 
 <br>
 
-# thwo-bookshelf
+# thwo-bookRepository
 
 ## Workshop
 

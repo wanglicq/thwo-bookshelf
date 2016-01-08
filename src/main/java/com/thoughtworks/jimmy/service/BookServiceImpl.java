@@ -32,7 +32,11 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void create(BookEntity book) {
-        bookRepository.save(book);
+        if(bookRepository.exists(book.getIsbn())){
+            throw new RuntimeException("this isbn has exists!");
+        }else {
+            bookRepository.save(book);
+        }
     }
 
     @Override
@@ -47,6 +51,8 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Iterable<BookEntity> findByTitle(String title) {
+        Iterable<BookEntity> foundBook = bookRepository.findByTitle(title);
+        Optional.ofNullable(foundBook).orElseThrow(() -> new RuntimeException("fuzzy title not found !"));
         return bookRepository.findByTitle(title);
 //        return bookRepository.findByTitleContaining(title);
     }

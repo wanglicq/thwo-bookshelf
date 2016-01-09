@@ -1,6 +1,7 @@
 package com.thoughtworks.jimmy.service;
 
 import com.thoughtworks.jimmy.entity.BookEntity;
+import com.thoughtworks.jimmy.entity.CategoryEntity;
 
 public interface BookService {
 
@@ -17,4 +18,6 @@ public interface BookService {
     Iterable<BookEntity> findByTitle(String title);
 
     Iterable<BookEntity> findByCategoryName(String name);
+
+    CategoryEntity findCategoryByIsbn(String isbn);
 }

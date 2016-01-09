@@ -37,6 +37,7 @@ public class BookServiceImpl implements BookService {
         }else {
             bookRepository.save(book);
         }
+        //bookRepository.save(book);
     }
 
     @Override
@@ -62,6 +63,12 @@ public class BookServiceImpl implements BookService {
         CategoryEntity category = categoryRepository.findByName(name);
         Optional.ofNullable(category).orElseThrow(() -> new RuntimeException("Category not found !"));
         return bookRepository.findByCategoryCode(category.getCode());
+    }
+
+    @Override
+    public CategoryEntity findCategoryByIsbn(String isbn) {
+        BookEntity book = bookRepository.findOne(isbn);
+        return categoryRepository.findOne(book.getCategoryCode());
     }
 
 }

@@ -1,5 +1,6 @@
 package com.thoughtworks.jimmy.controller;
 
+import com.thoughtworks.jimmy.entity.CategoryEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,6 +30,11 @@ public class BookShelfController {
         return bookService.findByCategoryName(categoryName);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/isbnToCategory/{isbn}")
+    public CategoryEntity getCategoryByIsbn(@PathVariable String isbn){
+        return bookService.findCategoryByIsbn(isbn);
+    }
+
     @RequestMapping(method = RequestMethod.GET)
     public Iterable<BookEntity> query() {
 
@@ -36,7 +42,7 @@ public class BookShelfController {
 
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.CREATED)
     public void save(@RequestBody BookEntity book) {
 
